@@ -1,0 +1,19 @@
+{
+  "name": "pokescript",
+  "version": "1.0.0",
+  "description": "A Pokémon battle game in Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinCoqueran/PokeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuentinCoqueran/PokeScript/issues"
+  },
+  "homepage": "https://github.com/QuentinCoqueran/PokeScript#readme"
+}
