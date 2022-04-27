@@ -1,4 +1,13 @@
-export class Pokemon{
+export interface pokemonInterface{
+    currentHp : number;
+    name : string;
+    attack : number;
+    maxHp: number;
+    speed : number;
+    attackTo(pokemon: Pokemon): void ;
+}
+
+export class Pokemon implements pokemonInterface{
     currentHp : number;
     name : string;
     attack : number;
@@ -14,8 +23,7 @@ export class Pokemon{
         this.speed = speed;
     }
 
-    attackTo(pokemon: Pokemon): void {
+    attackTo(pokemon: Pokemon){
         pokemon.currentHp -= this.attack;
     }
-
 }
