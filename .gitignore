@@ -1,9 +1,9 @@
-/node_modules
+
 ./package.json
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+dist
 /tmp
 /out-tsc
 
@@ -46,6 +46,7 @@ bower_components
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+./idea
 
 # misc
 .sass-cache
