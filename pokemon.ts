@@ -1,26 +1,28 @@
-export interface pokemonInterface{
-    currentHp : number;
+import {PokemonType} from "./pokemonType";
+
+export interface PokemonProps {
     name : string;
     attack : number;
     maxHp: number;
     speed : number;
-    attackTo(pokemon: Pokemon): void ;
+    pokemontype: PokemonType;
 }
 
-export class Pokemon implements pokemonInterface{
+export class Pokemon implements PokemonProps{
     currentHp : number;
     name : string;
     attack : number;
     maxHp: number;
     speed : number;
+    pokemontype: PokemonType;
 
-
-    constructor(name: string, maxHp: number, attack: number, speed: number) {
-        this.currentHp = maxHp;
-        this.name = name;
-        this.attack = attack;
-        this.maxHp = maxHp;
-        this.speed = speed;
+    constructor(pokemon: PokemonProps){
+        this.currentHp = pokemon.maxHp;
+        this.name = pokemon.name;
+        this.attack = pokemon.attack;
+        this.maxHp = pokemon.maxHp;
+        this.speed = pokemon.speed;
+        this.pokemontype = pokemon.pokemontype;
     }
 
     attackTo(pokemon: Pokemon){
