@@ -4,7 +4,7 @@
   "description": "A Pokémon battle game in Angular",
   "main": "index.js",
   "scripts": {
-    "start": "rmdir /q /s dist && tsc && node ./dist index.js" // à modifier sur vos machines
+    "start": "rmdir /q /s dist && tsc && node ./dist index.js"
   },
   "repository": {
     "type": "git",
