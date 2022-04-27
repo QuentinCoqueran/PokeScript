@@ -59,6 +59,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# jest config
+jest.config.js
 
 # Dependency directories
 node_modules/
