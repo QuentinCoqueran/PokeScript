@@ -1,13 +1,17 @@
-import {PokemonType} from "../pokemonType";
-import {Pokemon, PokemonProps} from "../pokemon";
-import {Battle} from "../battle";
+import {PokemonFire, PokemonIce} from "../src/pokemon";
+import {Battle} from "../src/battle";
 
-const battle : Battle = new Battle();
-const pikachu : Pokemon = new Pokemon( {name: 'Pikachu', maxHp: 25, attack: 5, speed: 10, pokemontype: 'electric'});
-const bulbizarre : Pokemon = new Pokemon( {name: 'Bulbizarre', maxHp: 25, attack: 5, speed: 5, pokemontype: 'grass'});
-const salameche : Pokemon = new Pokemon( {name: 'Salamèche', maxHp: 25, attack: 6, speed: 8, pokemontype: 'fire'});
+let battle : Battle;
+let pikachu : PokemonFire;
+let bulbizarre : PokemonIce;
+let salameche : PokemonFire;
 
-
+beforeEach(() => {
+    battle = new Battle();
+    pikachu = {name: 'Pikachu', maxHp: 25, currentHp: 25, attack: 5, speed: 10, type: 'fire'};
+    bulbizarre = {name: 'Bulbizarre', maxHp: 25, currentHp: 25, attack: 5, speed: 5, type: 'ice'};
+    salameche = { name: 'Salamèche', maxHp: 25, currentHp: 25, attack: 6, speed: 8, type: 'fire'};
+});
 
 
 describe("Battle", () => {
@@ -47,6 +51,20 @@ describe("Battle", () => {
             it("should return Pikachu as winner", () =>{
                 expect(battle.battleRounds(pikachu,bulbizarre)).toBe('Pikachu is the winner !');
             });
+        });
+    });
+    describe("Types", () => {
+        describe("when fire pokemon attacks ice pokemon", () => {
+            it("attack should be *1.5", () => {
+                battle.attack(pikachu, bulbizarre);
+                expect(bulbizarre.currentHp).toBe(17.5);
+            })
+        });
+        describe("when fire pokemon attacks fire pokemon", () => {
+            it("attack should be *1", () => {
+                battle.attack(pikachu, salameche);
+                expect(salameche.currentHp).toBe(20);
+            })
         });
     });
 });
