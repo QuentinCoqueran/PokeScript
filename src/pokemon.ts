@@ -1,4 +1,4 @@
-export type Pokemon = {
+export interface Pokemon  {
     name : string;
     attack : number;
     maxHp: number;
