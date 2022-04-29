@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 
+=======
+/node_modules
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 ./package.json
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
@@ -94,3 +99,7 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+=======
+package.json
+
+>>>>>>> Stashed changes
