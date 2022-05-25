@@ -36,33 +36,33 @@ describe("Battle", () => {
     });
     describe("Winners", () => {
         describe("when Pikachu and Salamèche fights ", () => {
-            it("should return Pikachu as winner", () =>{
-                expect(battle.battleRounds(pikachu,salameche)).toBe('Pikachu is the winner !');
+            it("should return Pikachu as winner", async () =>{
+                expect(await battle.battleRounds(pikachu,salameche)).toBe('Pikachu is the winner !');
             });
         });
 
         describe("when Salamèche and Bulbizarre fights ", () => {
-            it("should return Salamèche as winner", () =>{
-                expect(battle.battleRounds(salameche,bulbizarre)).toBe('Salamèche is the winner !');
+            it("should return Salamèche as winner",async () =>{
+                expect(await battle.battleRounds(salameche,bulbizarre)).toBe('Salamèche is the winner !');
             });
         });
 
         describe("when Pikachu and Bulbizarre fights ", () => {
-            it("should return Pikachu as winner", () =>{
-                expect(battle.battleRounds(pikachu,bulbizarre)).toBe('Pikachu is the winner !');
+            it("should return Pikachu as winner",async () =>{
+                expect(await battle.battleRounds(pikachu,bulbizarre)).toBe('Pikachu is the winner !');
             });
         });
     });
     describe("Types", () => {
         describe("when fire pokemon attacks ice pokemon", () => {
-            it("attack should be *1.5", () => {
-                battle.attack(pikachu, bulbizarre);
+            it("attack should be *1.5", async () => {
+                await battle.attack(pikachu, bulbizarre);
                 expect(bulbizarre.currentHp).toBe(17.5);
             })
         });
         describe("when fire pokemon attacks fire pokemon", () => {
-            it("attack should be *1", () => {
-                battle.attack(pikachu, salameche);
+            it("attack should be *1", async () => {
+                await battle.attack(pikachu, salameche);
                 expect(salameche.currentHp).toBe(20);
             })
         });
