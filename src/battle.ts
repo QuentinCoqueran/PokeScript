@@ -12,18 +12,15 @@ export class Battle {
                 }
                 else{
                     this.attack(pokemon2, pokemon1)
-
                 }
                 countRound ++;
             }
             if(p1AsAttack){
                 this.attack(pokemon2, pokemon1)
-
                 p1AsAttack = false;
             }
             else{
                 this.attack(pokemon1, pokemon2)
-
                 p1AsAttack = true;
             }
         }
@@ -46,7 +43,6 @@ export class Battle {
         else {
             to.currentHp = 0;
         }
-
     }
 
     FirstToAttack (pokemon1 : Pokemon, pokemon2 : Pokemon): Pokemon {
